@@ -1,11 +1,16 @@
 {
   "name": "portfolio",
   "private": true,
+  "version": "1.0",
+  "author": "Ariel Aguilera <epofmip@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "engines": {
+    "node": ">= 16.13.2"
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.19",
