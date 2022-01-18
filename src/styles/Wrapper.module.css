@@ -1,0 +1,187 @@
+div.general_content {
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+div.general_content > div.background_image {
+  position: absolute;
+  background: url("../Assets/ariel_aguilera_image.jpg") fixed;
+  filter: blur(9px);
+  -webkit-filter: blur(9px);
+  background-position-y: 25%;
+  transform: scale(1.1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+section.contact_bar {
+  width: 10vw;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+section.contact_bar > a.hover_text_icon {
+  padding: 10px 10px 10px 10px;
+  max-width: 50%;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: inherit;
+  position: relative;
+  text-align: center;
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: transparent;
+  font-size: 1rem;
+}
+
+
+section.contact_bar > a.hover_text_icon > .icons {
+  color: var(--font-color);
+  font-size: 2.2rem;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+section.contact_bar > a.hover_text_icon:nth-child(1){
+  transform: translateY(0%);
+}
+
+section.contact_bar > a.hover_text_icon:nth-child(1):hover {
+  transform: translateY(-15%);
+}
+
+section.contact_bar > a.hover_text_icon:nth-child(2) {
+  transform: translateY(0%);
+}
+
+section.contact_bar > a.hover_text_icon:nth-child(2):hover {
+  transform: translateY(-15%);
+}
+
+section.contact_bar > a.hover_text_icon:hover {
+  opacity: 1;
+  color: white;
+}
+
+section.main_content {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+section.main_content > nav {
+  width: 90%;
+  padding: 10px;
+}
+
+section.main_content > nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+section.main_content > nav > ul > li {
+  position: relative;
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex: 1;
+  transition: 0.5s;
+}
+
+section.main_content > nav > ul > li:nth-child(1):hover + li:nth-child(2) > span:nth-child(1) {
+  background-color: var(--font-color);
+  opacity: 1;
+}
+
+section.main_content > nav > ul > li > span {
+  background-color: var(--font-color);
+  width: 100%;
+  height: 1%;
+  flex: 1;
+  opacity: 0.3;
+  transition: inherit;
+}
+
+section.main_content > nav > ul > li > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+  opacity: 0.3;
+  transition: inherit;
+}
+
+section.main_content > nav > ul > li:hover > div {
+  padding: 0 5% 0 5%;
+}
+
+section.main_content > nav > ul > li:hover > span,
+section.main_content > nav > ul > li:hover > div,
+section.main_content > nav > ul > li:hover > div > strong {
+  opacity: 1;
+}
+
+section.main_content > nav > ul > li > div > .li_icons {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  transform: translateY(50%);
+  transition: inherit;
+}
+
+section.main_content > nav > ul > li > div > strong {
+  font-size: 1rem;
+  opacity: 0;
+  transition: inherit;
+}
+
+section.main_content > nav > ul > li:hover > div > .li_icons {
+  transform: translateY(0%);
+}
+
+.li_icons_selected {
+  color: white;
+  opacity: 1;
+}
+
+.content_container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  position: relative;
+  flex: 0.95;
+  width: 96%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 1px var(--general-color);
+}
+
+@media (max-width: 1400px) {
+  .content_container { max-height: 80vh; }
+}

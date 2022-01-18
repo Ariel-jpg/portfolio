@@ -1,0 +1,92 @@
+section.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+section.container > div.degree_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  animation: appear 0.5s linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+section.container > div.degree_container:nth-child(2) {
+  animation-delay: 0.5s;
+}
+section.container > div.degree_container:nth-child(3) {
+  animation-delay: 1s;
+}
+section.container > div.degree_container:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+section.container > div.degree_container > span.degree_year {
+  position: relative;
+  flex: 0.2;
+  border-right: solid white 2px;
+  padding: 6% 2.5% 6% 0;
+  text-align: right;
+}
+
+section.container > div.degree_container > span.degree_year::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(55%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+section.container > div.degree_container > div.degree_details {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  animation: appear 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  text-align: left;
+}
+
+section.container > div.degree_container > div.degree_details > strong {
+  text-transform: uppercase;
+}
+
+section.container > div.degree_container > div.degree_details > span {
+  margin-top: 5px;
+  opacity: 0.9;
+  white-space: pre-line;
+  word-break: break-all;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1400px) {
+  section.container > div.degree_container > span.degree_year { padding: 5% 2.5% 5% 0; font-size: 1rem; }
+  section.container > div.degree_container > div.degree_details { font-size: 1rem; }
+  section.container > div.degree_container > span.degree_year::after { 
+    width: 13px;
+    height: 13px;
+  }
+}
