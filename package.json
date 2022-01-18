@@ -10,7 +10,8 @@
     "lint": "next lint"
   },
   "engines": {
-    "node": "17.x"
+    "node": "17.x",
+    "npm": "8.x"
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.19",
