@@ -185,3 +185,33 @@ section.main_content > nav > ul > li:hover > div > .li_icons {
 @media (max-width: 1400px) {
   .content_container { max-height: 80vh; }
 }
+
+@media (max-width: 425px){
+  div.general_content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+  }
+
+  .content_container {
+    max-height: 90vh;
+
+  }
+
+  section.main_content {
+    order: 1;
+    height: 80%;
+  }
+  
+  section.contact_bar {
+    order: 2;
+    height: 10vh;
+    width: 100%;
+    flex-direction: row;
+  }  
+
+  div.general_content > div.background_image {
+    background-position: center;
+  }
+}

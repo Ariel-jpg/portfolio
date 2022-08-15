@@ -1,6 +1,5 @@
 import Head from "next/head"
-import Link from "next/link"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Wrapper.module.css"
 
 import { BsGithub } from "react-icons/bs"
@@ -16,11 +15,16 @@ import TechnologiesSection from "./Technologies";
 import { useSwipeable } from "react-swipeable"
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
+
 function Wrapper({ component: Component, props }) {
     const [section, setSection] = useState(1)
 
     const [overSecondLi, setOverSecondLi] = useState(false);
     const [overThirdLi, setOverThirdLi] = useState(false);
+
+    useEffect(() => {
+        console.log(section)
+    }, [section])
 
     const handlers = useSwipeable({
         onSwipedDown: () => section < 4 && setSection(section + 1),
@@ -49,6 +53,7 @@ function Wrapper({ component: Component, props }) {
                             EMAIL
                         </a>
                     </section>
+
                     <section className={styles.main_content}>
                         <nav>
                             <ul>

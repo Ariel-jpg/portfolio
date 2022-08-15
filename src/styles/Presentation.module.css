@@ -52,7 +52,7 @@ div.presentation > span {
   height: 0.3rem;
   background-color: white;
   display: block;
-  border-radius: 1900%;
+  border-radius: 100%;
   margin: auto;
   animation: move_wheel 2s linear infinite;
 }
@@ -76,3 +76,28 @@ div.presentation > span {
 }
 
 /* Make responsive */
+
+@media (max-width: 425px){
+  div.presentation {
+    background-position: center;
+  }
+
+  div.presentation > strong {
+    left: -20px;
+  }
+
+  .mouse {
+    border-radius: 5px;
+  }
+
+  @keyframes move_wheel {
+    0% {
+      opacity: 0.1;
+      transform: translateY(150%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-150%);
+    }
+  }
+}

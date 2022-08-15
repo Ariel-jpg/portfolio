@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import styles from "../styles/Projects.module.css"
 import image_1 from "../Assets/portfolio_presentation.png"
 import image_2 from "../Assets/sinif_presentation.png"
@@ -27,6 +26,10 @@ const ProjectCard = ({ projectName, projectImage }) => (
 function Projects() {
     return <section  className={styles.container}>
         <ProjectCard projectName="Sinif" projectImage={image_1} />
+        <ProjectCard projectName="Sinif" projectImage={image_1} />
+        <ProjectCard projectName="Sinif" projectImage={image_1} />
+        <ProjectCard projectName="Sinif" projectImage={image_1} />
+        <ProjectCard projectName="Portfolio" projectImage={image_2} /> 
         <ProjectCard projectName="Portfolio" projectImage={image_2} /> 
     </section>
 }

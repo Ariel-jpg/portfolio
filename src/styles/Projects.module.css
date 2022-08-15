@@ -76,3 +76,19 @@ section.container > div.project_card_container:hover > span {
     opacity: 0;
   }
 }
+
+@media (max-width: 768px){
+  section.container > div.project_card_container {
+    width: 30%;
+    height: 30%;
+  }
+}
+
+
+@media (max-width: 425px){
+  section.container > div.project_card_container {
+    width: 40%;
+    height: 25%;
+    border-radius: 20%;
+  }
+}
