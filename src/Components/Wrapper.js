@@ -48,7 +48,7 @@ function Wrapper({ component: Component, props }) {
                             <BsGithub className={styles.icons} />
                             GITHUB
                         </a>
-                        <a href="" className={styles.hover_text_icon}> {/* TODO */}
+                        <a href="mailto:epofmip@gmail.com" className={styles.hover_text_icon}> {/* TODO */}
                             <SiGmail className={styles.icons} />
                             EMAIL
                         </a>

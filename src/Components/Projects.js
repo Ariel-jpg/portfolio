@@ -9,8 +9,8 @@ import image_2 from "../Assets/sinif_presentation.png"
  * @param  {string} projectImage It's image path
  */
 
-const ProjectCard = ({ projectName, projectImage }) => (
-    <div className={styles.project_card_container}>
+const ProjectCard = ({ projectName, projectImage, projectLink }) => (
+    <div className={styles.project_card_container} onClick>
         <div className={styles.project_image}>
             <Image src={projectImage} alt={"Project: " + projectName + " image"} objectFit="cover" layout="fill" contentEditable="false" />
         </div>   
@@ -26,10 +26,6 @@ const ProjectCard = ({ projectName, projectImage }) => (
 function Projects() {
     return <section  className={styles.container}>
         <ProjectCard projectName="Sinif" projectImage={image_1} />
-        <ProjectCard projectName="Sinif" projectImage={image_1} />
-        <ProjectCard projectName="Sinif" projectImage={image_1} />
-        <ProjectCard projectName="Sinif" projectImage={image_1} />
-        <ProjectCard projectName="Portfolio" projectImage={image_2} /> 
         <ProjectCard projectName="Portfolio" projectImage={image_2} /> 
     </section>
 }
