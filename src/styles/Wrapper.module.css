@@ -191,7 +191,6 @@ section.main_content > nav > ul > li:hover > div > .li_icons {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
   }
 
   .content_container {

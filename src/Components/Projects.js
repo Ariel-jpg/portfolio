@@ -25,8 +25,8 @@ const ProjectCard = ({ projectName, projectImage, projectLink }) => (
  */
 function Projects() {
     return <section  className={styles.container}>
-        <ProjectCard projectName="Sinif" projectImage={image_1} />
-        <ProjectCard projectName="Portfolio" projectImage={image_2} /> 
+        <ProjectCard projectName="PortFolio" projectImage={image_1} />
+        <ProjectCard projectName="Sinif" projectImage={image_2} /> 
     </section>
 }
 

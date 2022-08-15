@@ -100,7 +100,6 @@ section.container > div.degree_container > div.degree_details > span {
   }
 
   section.container > div.degree_container {
-    /* background-color: red; */
     height: 40%;
   }
 }
