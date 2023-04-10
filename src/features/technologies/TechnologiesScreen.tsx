@@ -7,6 +7,7 @@ import { GrMysql } from "react-icons/gr";
 
 const TechnologiesScreen = (): JSX.Element => {
     const onOpenTechnology = (url: string) => window.open(url, "_blank", 'noopener,noreferrer')
+    
     return <Technologies>
         <ButtonIcon
             Icon={({ size }: { size: number }) => <SiRedux size={size} />}

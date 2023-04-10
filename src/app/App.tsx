@@ -17,7 +17,7 @@ import TechnologiesScreen from '../features/technologies/TechnologiesScreen';
 
 
 function App() {
-  const [section, setSection] = useState(1);
+  const [section, setSection] = useState(0);
 
   const swip = useSwipeable({
     onSwipedDown: () => handleSwipe({ deltaY: -1 }),
@@ -29,29 +29,28 @@ function App() {
     else if (e.deltaY < 0 && section > 0) setSection(section - 1);
   }
 
-  console.log(section)
-
+  const onRedirect = (url:string) => window.open(url, "_blank", 'noopener,noreferrer');
 
   return <Wrapper>
     <Contacto>
       <ButtonIcon
         legend='EMAIL'
         Icon={({ size }: { size: string }) => <SiGmail size={size} />}
-        onClick={() => { }}
+        onClick={() => onRedirect("mailto:ariel.aguilera.professional@gmail.com")}
         active
       />
 
       <ButtonIcon
         legend='LINKEDIN'
         Icon={({ size }: { size: string }) => <AiFillLinkedin size={size} />}
-        onClick={() => { }}
+        onClick={() => onRedirect("https://www.linkedin.com/in/ariel-aguilera-9007971a6/")}
         active
       />
 
       <ButtonIcon
         legend='GITHUB'
         Icon={({ size }: { size: string }) => <BsGithub size={size} />}
-        onClick={() => { }}
+        onClick={() => onRedirect("https://github.com/Ariel-jpg")}
         active
       />
     </Contacto>
