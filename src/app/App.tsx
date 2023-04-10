@@ -12,6 +12,8 @@ import backgroundImage from "../assets/ariel_aguilera_image.jpg";
 import PresentationScreen from '../features/presentation/PresentationScreen';
 import { useSwipeable } from 'react-swipeable';
 import ProjectsScreen from '../features/projects/ProjectsScreen';
+import EducationScreen from '../features/education/EducationScreen';
+import TechnologiesScreen from '../features/technologies/TechnologiesScreen';
 
 
 function App() {
@@ -23,9 +25,11 @@ function App() {
   })
 
   const handleSwipe = (e: React.WheelEvent<HTMLElement> | { deltaY: number }) => {
-    if (e.deltaY > 0 && section < 4) setSection(section + 1);
+    if (e.deltaY > 0 && section < 3) setSection(section + 1);
     else if (e.deltaY < 0 && section > 0) setSection(section - 1);
   }
+
+  console.log(section)
 
 
   return <Wrapper>
@@ -70,7 +74,7 @@ function App() {
       />
 
       <ButtonIcon
-        legend='TECNOLOGÍA'
+        legend='TECNOLOGÍAS'
         Icon={({ size }: { size: string }) => <RiTerminalBoxFill size={size} />}
         onClick={() => setSection(3)}
         sustainedActivation={section === 3}
@@ -81,6 +85,8 @@ function App() {
     <Screen onWheel={(e) => handleSwipe(e)} {...swip} >
       {section == 0 && <PresentationScreen />}
       {section == 1 && <ProjectsScreen />}
+      {section == 2 && <EducationScreen />}
+      {section == 3 && <TechnologiesScreen />}
     </Screen>
   </Wrapper >
 }
@@ -110,11 +116,7 @@ const Screen = styled.section`
   grid-area: screen;
   padding: 0 2% 2% 2%;
   width: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   user-select: none;
-
 
   @media (max-width: 1024px) {
     padding: 0;
@@ -127,15 +129,14 @@ const Screen = styled.section`
 
     width: 100%;
     height: 100%;
-    max-height: 85vh;
     color: white;
   }
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
 
   display: grid;
@@ -167,16 +168,19 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 1024px) {
+    /* overflow-y: auto; */
+    min-height: 100vh;
+    height: fit-content;
+
     grid-template-areas: "navbar"
                          "screen"
                          "contacto";
   
     grid-template-columns: 80%;
-    grid-template-rows: auto 80% auto;
+    grid-template-rows: 100px auto 100px;
 
     justify-content: center;
     align-items: center;
-    overflow-y: scroll;
   }
 `;
 

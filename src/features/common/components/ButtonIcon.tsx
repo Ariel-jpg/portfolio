@@ -8,23 +8,24 @@ type ButtonIconType = {
 
     active?: boolean,
     iconColor?: string,
+    iconSize?: string
     sustainedActivation?: boolean
 }
 
 type StyledButtonType = { 
     active?: boolean,     
     iconColor?: string,
-    sustainedActivation?: boolean
+    sustainedActivation?: boolean,
 }
 
-const ButtonIcon = ({ Icon, legend, onClick, active, iconColor, sustainedActivation }: ButtonIconType) => {
+const ButtonIcon = ({ Icon, legend, onClick, active, iconColor, sustainedActivation, iconSize }: ButtonIconType) => {
     return <StyledButton 
         onClick={() => onClick()}
         active={active}
         iconColor={iconColor}
         sustainedActivation={sustainedActivation}
     >
-        <Icon size="2.1rem" />
+        <Icon size={iconSize ? iconSize : "2.1rem"} />
         <span children={legend} className={sustainedActivation ? "sustainedActivation" : ""} />
     </StyledButton>
 }
@@ -42,9 +43,7 @@ const StyledButton = styled.button<StyledButtonType>`
     border: none;
     cursor: pointer;
 
-    @media (max-width: 1024px){
-        font-size: 0.7rem;
-    }
+    @media (max-width: 1024px){ font-size: 0.7rem; }
 
     color: ${props => props.active ? "white" : "rgba(255, 255, 255, 0.4)"};
 

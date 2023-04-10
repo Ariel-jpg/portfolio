@@ -7,23 +7,19 @@ import nasaPhotoDayImage from "../../assets/photo_day_presentation.png";
 const ProjectsScreen = () : JSX.Element => {
     return <Projects>
         <ProjectCard backgroundImage={portfolioImage} legend="Portfolio" url="" />
-        <ProjectCard backgroundImage={portfolioImage} legend="Portfolio" url="" />
-        <ProjectCard backgroundImage={nasaPhotoDayImage} legend="Nasa photo day" url="https://nasa-photo-day-page.netlify.app/" />
-        <ProjectCard backgroundImage={nasaPhotoDayImage} legend="Nasa photo day" url="https://nasa-photo-day-page.netlify.app/" />
         <ProjectCard backgroundImage={nasaPhotoDayImage} legend="Nasa photo day" url="https://nasa-photo-day-page.netlify.app/" />
     </Projects>
 }
 
-
 const Projects = styled.main`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    /* overflow: hidden; */
+    justify-content: space-evenly;
+
     height: 100%;
-    gap: 20px;
+    gap: 5%;
     
-    padding-top: 20px;
+    padding: 20px;
     box-sizing: border-box;
 `;
 
