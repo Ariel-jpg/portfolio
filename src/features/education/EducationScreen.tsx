@@ -8,8 +8,8 @@ const EducationScreen = () : JSX.Element => {
             <Experience>
                 <h3>TÉCNICO EN INFOMÁTICA PERSONAL Y PROFESIONAL</h3>
                 <ul>
-                    <li>Bachiller ténico con orientación a TI</li>
-                    <li>Escuela ténica número 2 "Dr. René Favaloro"</li>
+                    <li>Bachiller técnico con orientación a TI</li>
+                    <li>Escuela técnica número 2 "Dr. René Favaloro"</li>
                 </ul>
             </Experience>
 
